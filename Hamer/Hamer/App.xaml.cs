@@ -11,7 +11,7 @@ namespace Hamer
         {
             InitializeComponent();
 
-            MainPage = new GridPage();
+            MainPage = new Absolute();
         }
 
         protected override void OnStart()
