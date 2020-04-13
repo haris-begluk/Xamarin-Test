@@ -6,15 +6,11 @@
              mc:Ignorable="d"
              x:Class="Hamer.Views.GreetPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="{
-            Binding
-            Source={ x:Reference slider },
-            Path=Value,
+        <BoxView Color="Green" Opacity="{Binding Source={x:Reference slider}, Path=Value}"></BoxView>
+        <Label BindingContext="{x:Reference slider}" Text="{
+            Binding Value,
             StringFormat='Value is {0:F2}' }" x:Name="label"
-            Opacity="{Binding
-            Source={x:Reference slider},
-            Path=Value}"></Label>
-        <!--Label text will not be shown-->
+            Opacity="{Binding Value}"></Label>
         <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"></Slider>
     </StackLayout>
 
