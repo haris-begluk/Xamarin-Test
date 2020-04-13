@@ -16,18 +16,49 @@ namespace Hamer.Views
         {
             InitializeComponent();
             slider.Value = 0.5;
-            if (Device.RuntimePlatform.Equals(Device.iOS)) //Setting
+
+
+            switch (Device.RuntimePlatform)
             {
-                Padding = new Thickness(0, 20, 0, 0);
+                case Device.iOS:
+                    this.Padding = new Thickness(0, 20, 0, 0);
+                    break;
+                case Device.Android:
+                case Device.UWP:
+                case Device.macOS:
+                default:
+                    this.Padding = new Thickness(0);
+                    break;
             }
-            else if (Device.RuntimePlatform.Equals(Device.Android))
-            {
-                Padding = new Thickness(20, 20, 20, 20);
-            }
-            else if (Device.RuntimePlatform.Equals(Device.UWP))
-            {
-                Padding = new Thickness(20, 0, 20, 20);
-            }
+
+
+            //Padding = Device.OnPlatform(
+            //     iOS: new Thickness(0, 20, 0, 0),
+            //     Android: new Thickness(20, 20, 20, 20),
+            //     WinPhone: new Thickness(20, 0, 20, 20));
+
+            //Device.OnPlatform(iOS: () =>
+            //{
+            //    Padding = new Thickness(0, 20, 0, 0);
+            //}, Android: () =>
+            //{
+            //    Padding = new Thickness(0, 20, 0, 0);
+            //});
+
+
+            //if (Device.RuntimePlatform.Equals(Device.iOS)) //Setting
+            //{
+            //    Padding = new Thickness(0, 20, 0, 0);
+            //}
+            //else if (Device.RuntimePlatform.Equals(Device.Android))
+            //{
+            //    Padding = new Thickness(20, 20, 20, 20);
+            //}
+            //else if (Device.RuntimePlatform.Equals(Device.UWP))
+            //{
+            //    Padding = new Thickness(20, 0, 20, 20);
+            //}
+
         }
 
 
