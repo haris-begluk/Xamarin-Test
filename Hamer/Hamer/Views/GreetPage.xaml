@@ -6,7 +6,11 @@
              mc:Ignorable="d"
              x:Class="Hamer.Views.GreetPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Hello World!" x:Name="label"></Label>
+        <Label Text="{
+            Binding
+            Source={ x:Reference slider },
+            Path=Value,
+            StringFormat='Value is {0:F2}' }" x:Name="label"></Label>
         <!--Label text will not be shown-->
         <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"></Slider>
     </StackLayout>
