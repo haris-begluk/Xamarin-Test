@@ -11,7 +11,7 @@ namespace Hamer
         {
             InitializeComponent();
 
-            MainPage = new GreetPage();
+            MainPage = new StackPage();
         }
 
         protected override void OnStart()
