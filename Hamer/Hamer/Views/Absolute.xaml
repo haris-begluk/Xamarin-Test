@@ -4,8 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Hamer.Views.Absolute" Padding="0, 20 ,0,0">
-    <AbsoluteLayout BackgroundColor="Yellow">
+             x:Class="Hamer.Views.Absolute" >
+    <!--<AbsoluteLayout BackgroundColor="Yellow">
         <BoxView BackgroundColor="Aqua"
                  AbsoluteLayout.LayoutBounds="0,0,1,1"
                  AbsoluteLayout.LayoutFlags="All"></BoxView>
@@ -16,5 +16,5 @@
                  AbsoluteLayout.LayoutBounds="0,1,1,50"
                  AbsoluteLayout.LayoutFlags="PositionProportional , WidthProportional"
                 Text="Save" TextColor="Black"></Button>
-    </AbsoluteLayout>
+    </AbsoluteLayout>-->
 </ContentPage>
