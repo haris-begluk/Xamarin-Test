@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hamer.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Hamer
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new GreetPage();
         }
 
         protected override void OnStart()
