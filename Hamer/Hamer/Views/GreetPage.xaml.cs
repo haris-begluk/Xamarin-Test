@@ -15,6 +15,12 @@ namespace Hamer.Views
         public GreetPage()
         {
             InitializeComponent();
+            Content = new Label
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Text = "Hello World"
+            };
         }
 
         private void Button_Clicked(object sender, EventArgs e)
