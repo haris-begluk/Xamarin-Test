@@ -5,9 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Hamer.Views.GreetPage">
-    <Button HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Clicked="Button_Clicked"
-            Text="Click Me">
-    </Button>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Hello World!" x:Name="label"></Label>
+        <!--Label text will not be shown-->
+        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"></Slider>
+    </StackLayout>
+
 </ContentPage>

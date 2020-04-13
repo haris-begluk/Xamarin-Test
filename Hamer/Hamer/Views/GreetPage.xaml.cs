@@ -15,17 +15,12 @@ namespace Hamer.Views
         public GreetPage()
         {
             InitializeComponent();
-            Content = new Label
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-                Text = "Hello World"
-            };
+            slider.Value = 0.5;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DisplayAlert("Hello World", "Hello world", "Ok");
+            label.Text = $"Value is {e.NewValue:F2}";
         }
     }
 }
