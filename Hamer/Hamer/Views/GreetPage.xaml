@@ -12,9 +12,9 @@
                  Opacity="{Binding Value}"></BoxView>
         <Label  Text="{
             Binding Value,
-            StringFormat='Value is {0:F2}' }" x:Name="label"
+            StringFormat='Value is {0:F2}' }"
             Opacity="{Binding Value}"></Label>
-        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"></Slider>
+        <Slider  x:Name="slider"></Slider>
     </StackLayout>
 
 </ContentPage>

@@ -16,11 +16,20 @@ namespace Hamer.Views
         {
             InitializeComponent();
             slider.Value = 0.5;
+            if (Device.RuntimePlatform.Equals(Device.iOS)) //Setting
+            {
+                Padding = new Thickness(0, 20, 0, 0);
+            }
+            else if (Device.RuntimePlatform.Equals(Device.Android))
+            {
+                Padding = new Thickness(20, 20, 20, 20);
+            }
+            else if (Device.RuntimePlatform.Equals(Device.UWP))
+            {
+                Padding = new Thickness(20, 0, 20, 20);
+            }
         }
 
-        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            label.Text = $"Value is {e.NewValue:F2}";
-        }
+
     }
 }
